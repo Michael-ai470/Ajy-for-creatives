@@ -308,6 +308,37 @@ p {
     background-color: #cc5555;
 }
 
+  /* Scroll‑to‑Top Button Styles */
+  #scrollToTopBtn {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    display: none;
+    background: var(--mint-green);
+    color: var(--midnight-blue);
+    border: none;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  #scrollToTopBtn:hover {
+    background: var(--vibrant-coral);
+    transform: scale(1.1);
+  }
+  #scrollToTopBtn.show {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
 footer {
     padding: 2rem;
     text-align: center;
