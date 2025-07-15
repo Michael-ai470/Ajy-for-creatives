@@ -136,6 +136,27 @@
             <a href="https://wa.me/2348136878310" target="_blank"><i class="fab fa-whatsapp"></i></a>
         </div>
     </footer>
+    <button id="scrollToTopBtn" title="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+    <script>
+        (function() {
+            const btn = document.getElementById('scrollToTopBtn');
+            let lastScroll = window.pageYOffset;
+
+            window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll > 100 && currentScroll < lastScroll) {
+                btn.classList.add('show');
+            } else {
+                btn.classList.remove('show');
+            }
+            lastScroll = currentScroll;
+            });
+
+            btn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        })();
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
     <script src="script.js"></script>
 </body>
